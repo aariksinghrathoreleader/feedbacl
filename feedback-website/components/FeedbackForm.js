@@ -10,7 +10,7 @@ const FeedbackForm = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post('/api/feedback', { feedback });
+      await axios.post('/.netlify/functions/feedback', { feedback });
       setSuccess(true);
       setFeedback('');
     } catch (error) {
@@ -35,5 +35,3 @@ const FeedbackForm = () => {
     </form>
   );
 };
-
-export default FeedbackForm;
