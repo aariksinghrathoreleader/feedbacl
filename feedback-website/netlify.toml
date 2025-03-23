@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "out" # This is the default output directory for Next.js static exports
+
+[functions]
+  directory = "functions" # Directory where your Netlify functions are located
+
+[dev]
+  command = "npm run dev"
+  port = 3000
