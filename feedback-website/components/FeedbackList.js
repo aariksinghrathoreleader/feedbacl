@@ -6,7 +6,7 @@ const FeedbackList = () => {
 
   useEffect(() => {
     const fetchFeedbacks = async () => {
-      const response = await axios.get('/api/feedbacks');
+      const response = await axios.get('/.netlify/functions/feedbacks');
       setFeedbacks(response.data);
     };
     fetchFeedbacks();
