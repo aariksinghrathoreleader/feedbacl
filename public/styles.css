@@ -1,0 +1,262 @@
+/* General Styles */
+body {
+    background-color: #f0f4f8; /* Light background */
+    color: #333; /* Dark text color */
+    font-family: 'Roboto', sans-serif; /* Font family */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3.5em; /* Larger font size for impact */
+    color: #ff6f61; /* Vibrant accent color */
+    text-shadow: 0 0 15px rgba(255, 111, 97, 0.7); /* Strong glow */
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+p {
+    font-size: 1.2em;
+    color: #555; /* Subtle text color */
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #ffffff; /* White background */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-bottom: 20px; /* Space below navigation */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px; /* Increased spacing */
+}
+
+nav ul li a {
+    color: #333; /* Dark text color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s; /* Transition for hover effect */
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #ff6f61; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Main Content Styles */
+main {
+    margin-top: 20px;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 2px solid #ff6f61; /* Border color */
+    border-radius: 10px;
+    background-color: #ffffff; /* Section background */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+}
+
+section:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 0 30px rgba(255, 111, 97, 0.5); /* Glowing shadow on hover */
+}
+
+/* Card Styles */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f9f9f9; /* Card background */
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 calc(30% - 20px); /* Responsive card size */
+    box-shadow: 0 0 15px rgba(255, 111, 97, 0.2); /* Soft shadow */
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Button Styles */
+.tool-button, .favorite-button, .category-button, .insight-button, .submit-button {
+    background-color: #ff6f61; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px; /* Increased padding for a larger button */
+    cursor: pointer;
+    font-size: 1.1em; /* Slightly larger font size */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+    margin-top: 10px; /* Space between buttons */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.tool-button:hover, .favorite-button:hover, .category-button:hover,
+.insight-button:hover, .submit-button:hover {
+    background-color: #e55a50; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Favorites and Insights Styles */
+.favorites-container, .insights-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.favorite-item, .insight {
+    background-color: #f9f9f9; /* Item background */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.favorite-item:hover, .insight:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Popup Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background with opacity */
+}
+
+.popup-content {
+    background-color: #ffffff; /* Popup background color */
+    margin: auto; /* Center the popup */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Set a max width for larger screens */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Strong shadow for popup */
+    position: relative; /* Position relative for centering */
+    top: 50%; /* Move down 50% of the viewport height */
+    transform: translateY(-50%); /* Move up by half of its own height */
+    transition: transform 0.3s ease; /* Smooth transition for popup */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff6f61; /* Change color on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffffff; /* White background for footer */
+    border-top: 2px solid #ff6f61; /* Top border */
+    border-radius: 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+footer p {
+    color: #555; /* Subtle text color */
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(45% - 20px); /* Adjust card size for smaller screens */
+    }
+
+    .category {
+        flex: 1 1 calc(45% - 20px); /* Adjust category size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        display: block; /* Stack navigation items vertically */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+
+    .card {
+        flex: 1 1 100%; /* Full width cards on small screens */
+    }
+
+    .category {
+        flex: 1 1 100%; /* Full width categories on small screens */
+    }
+
+    input {
+        width: 100%; /* Full width input on small screens */
+    }
+}
+
+/* Community Buttons Styles */
+.community-buttons {
+    margin-bottom: 20px;
+}
+
+/* Submit Button Styles */
+.submit-button {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px; /* Increased padding for a larger button */
+    cursor: pointer;
+    font-size: 1.1em; /* Slightly larger font size */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.submit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
