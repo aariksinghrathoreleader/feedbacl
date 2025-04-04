@@ -15,79 +15,70 @@
             <h1>AI Pulse</h1>
             <p>Your Magical AI Research Assistant</p>
         </header>
+        
+        <!-- Filters/Categories Section -->
+        <nav class="filters">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="image-generation">Image Generation</option>
+                <option value="text-analysis">Text Analysis</option>
+                <option value="nlp">Natural Language Processing</option>
+                <option value="ml">Machine Learning</option>
+            </select>
+            <input type="text" id="search-input" placeholder="Search...">
+        </nav>
+
         <nav>
             <ul>
                 <li><a href="#new-tools">New Tools</a></li>
                 <li><a href="#categories">Categories</a></li>
                 <li><a href="#favorites">Favorites</a></li>
                 <li><a href="#community">Community Insights</a></li>
+                <li><a href="#timeline">Timeline</a></li> <!-- Added Timeline Link -->
             </ul>
         </nav>
+
         <main>
             <section id="new-tools">
                 <h2>New AI Tools</h2>
                 <div class="card-container">
                     <div class="card">
                         <h3>Tool 1</h3>
+                        <p><strong>Category:</strong> Technology</p>
+                        <p><strong>Summary:</strong> ChatGPT is a powerful AI chatbot that can generate human-like responses.</p>
+                        <p><strong>Source:</strong> OpenAI</p>
                         <button class="tool-button" onclick="showPopup('ChatGPT (by OpenAI)<br><br>Best for: Conversational AI, content creation, coding assistance, customer support, and research.<br><br>Description: ChatGPT is a powerful AI chatbot that can generate human-like responses, assist with coding, create marketing content, answer complex questions, and even act as a brainstorming partner. It is widely used by businesses, students, and professionals for automating tasks and improving productivity.<br><br>Key Features:<br>- Natural language understanding and generation.<br>- Coding assistance (debugging, explaining, and generating code).<br>- Summarizing and reformatting long texts.<br>- Writing emails, essays, and marketing copy.<br><br>Alternatives: Google Gemini, Claude AI (Anthropic), Microsoft Copilot.')">Learn More</button>
                         <button class="favorite-button" onclick="addToFavorites('ChatGPT (by OpenAI)')">Add to Favorites</button>
                     </div>
                     <div class="card">
                         <h3>Tool 2</h3>
+                        <p><strong>Category:</strong> Image Generation</p>
+                        <p><strong>Summary:</strong> MidJourney creates stunning images based on text prompts.</p>
+                        <p><strong>Source:</strong> MidJourney</p>
                         <button class="tool-button" onclick="showPopup('MidJourney (AI Image Generation)<br><br>Best for: AI-powered digital art, photorealistic images, concept art, and creative design.<br><br>Description: MidJourney is an AI tool that creates stunning images based on text prompts. It is widely used by artists, designers, and marketers to generate unique visuals. Unlike traditional design software, it requires no manual drawing or editing skills—just enter a prompt, and it generates high-quality images.<br><br>Key Features:<br>- Creates detailed, high-resolution images.<br>- Works with artistic and photorealistic styles.<br>- Allows customization with text-based prompts.<br>- Suitable for concept art, marketing materials, and storytelling.<br><br>Alternatives: DALL·E (OpenAI), Stable Diffusion, Adobe Firefly.')">Learn More</button>
-                        <button class="favorite-button" onclick="addToFavorites('MidJourney (AI Image Generation)')">Add to Favorites</button>
-                    </div>
-                    <div class="card">
-                        <h3>Tool 3</h3>
-                        <button class="tool-button" onclick="showPopup('Runway ML (AI Video Editing & Generation)<br><br>Best for: AI-powered video editing, text-to-video creation, and VFX.<br><br>Description: Runway ML is an advanced AI tool that helps users generate and edit videos using AI. It can transform text prompts into videos, remove backgrounds, and apply cinematic effects without professional editing skills. This tool is great for content creators, filmmakers, and digital marketers.<br><br>Key Features:<br>- Text-to-video generation.<br>- AI-powered video editing (object removal, motion tracking).<br>- Style transfer and real-time collaboration.<br>- Easy integration with creative workflows.<br><br>Alternatives: Pika Labs, Synthesia (AI avatars & video generation), Adobe Firefly.')">Learn More</button>
-                        <button class="favorite-button" onclick="addToFavorites('Runway ML (AI Video Editing & Generation)')">Add to Favorites</button>
-                    </div>
-                </div>
-            </section>
-            <section id="categories">
-                <h2>Categories</h2>
-                <div class="category-list">
-                    <div class="category">
-                        Image Generation
-                        <button class="category-button" onclick="showPopup('Category: Image Generation')">Learn More</button>
-                    </div>
-                    <div class="category">
-                        Text Analysis
-                        <button class="category-button" onclick="showPopup('Category: Text Analysis')">Learn More</button>
-                    </div>
-                    <div class="category">
-                        Natural Language Processing
-                        <button class="category-button" onclick="showPopup('Category: Natural Language Processing')">Learn More</button>
-                    </div>
-                    <div class="category">
-                        Machine Learning
-                        <button class="category-button" onclick="showPopup('Category: Machine Learning')">Learn More</button>
-                    </div>
-                </div>
-            </section>
-            <section id="favorites">
-                <h2>Your Favorites</h2>
-                <div class="favorites-container" id="favorites-container">
-                    <!-- Favorite items will be dynamically added here -->
-                </div>
-            </section>
-            <section id="community">
-                <h2>Community Insights</h2>
-                <div class="community-buttons">
-                    <button class="insight-button" onclick="showGiveInsight()">Give Insight</button>
-                    <button class="insight-button" onclick="showReadInsights()">Read Insights</button>
-                </div>
-                <div id="insight-form-container" style="display: none;">
-                    <form id="insight-form" onsubmit="addInsight(event)">
-                        <textarea id="insight-input" placeholder="Share your insight..." required></textarea>
-                        <button type="submit" class="submit-button">Submit Insight</button>
+                        <button class="favorite-button" onclick="                       
+                         <button class="favorite-button" onclick="addToFavorites('ChatGPT (by OpenAI)')">Add to Favorites</button>
                     </form>
                 </div>
                 <div class="insights-container" id="insights-container" style="display: none;">
                     <!-- Community insights will be dynamically added here -->
                 </div>
             </section>
+
+            <!-- Timeline Section -->
+            <section id="timeline">
+                <h2>Timeline of AI Evolution</h2>
+                <div class="timeline-container">
+                    <p>This section will display a timeline of significant events in AI development.</p>
+                    <!-- You can add charts/graphs here using libraries like Chart.js or D3.js -->
+                    <div id="timeline-chart">
+                        <!-- Placeholder for timeline chart -->
+                        <p>Chart/Graph will be displayed here.</p>
+                    </div>
+                </div>
+            </section>
         </main>
+
         <footer>
             <p>&copy; 2025 AI Pulse.</p>
         </footer>
