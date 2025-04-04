@@ -1,183 +1,221 @@
 /* General Styles */
 body {
-    background-color: #f0f4f8; /* Light background */
-    color: #333; /* Dark text color */
-    font-family: 'Roboto', sans-serif; /* Font family */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #FAF3E0; /* Cream white background */
+    color: #333; /* Dark text for contrast */
     line-height: 1.6; /* Improved readability */
 }
 
 /* Container */
 .container {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 20px;
 }
 
-/* Header Styles */
+/* Header */
 header {
+    background: linear-gradient(135deg, #4CAF50, #2e7d32); /* Gradient background */
+    color: white;
+    padding: 40px 20px; /* Increased padding for spacious feel */
     text-align: center;
-    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin-bottom: 20px; /* Space below header */
 }
 
-h1 {
-    font-size: 3.5em; /* Larger font size for impact */
-    color: #ff6f61; /* Vibrant accent color */
-    text-shadow: 0 0 15px rgba(255, 111, 97, 0.7); /* Strong glow */
-    animation: fadeIn 1s ease-in-out; /* Fade-in effect */
+header h1 {
+    margin: 0;
+    font-size: 3em; /* Larger font size */
+    text-transform: uppercase; /* Uppercase for emphasis */
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+header p {
+    margin: 5px 0 20px;
+    font-size: 1.2em; /* Slightly larger font for better readability */
 }
 
-p {
-    font-size: 1.2em;
-    color: #555; /* Subtle text color */
+/* Filters */
+.filters {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
-/* Navigation Styles */
+.filters select, .filters input {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.filters select:focus, .filters input:focus {
+    border-color: #2e7d32; /* Darker green on focus */
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.5); /* Subtle glow effect */
+}
+
+/* Navigation */
 nav {
-    background-color: #ffffff; /* White background */
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    margin-bottom: 20px; /* Space below navigation */
+    margin: 20px 0;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 20px; /* Increased spacing */
+    margin-right: 20px;
 }
 
 nav ul li a {
-    color: #333; /* Dark text color */
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s, transform 0.3s; /* Transition for hover effect */
+    color: #4CAF50;
+    font-weight: bold; /* Bold links for emphasis */
+    transition: color 0.3s, transform 0.3s; /* Smooth color transition */
 }
 
-nav ul li a:hover,
-nav ul li a:focus {
-    color: #ff6f61; /* Change color on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
+nav ul li a:hover {
+    color: #2e7d32; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-/* Main Content Styles */
-main {
-    margin-top: 20px;
-}
-
-/* Section Styles */
-section {
-    margin-bottom: 40px;
-    padding: 20px;
-    border: 2px solid #ff6f61; /* Border color */
-    border-radius: 10px;
-    background-color: #ffffff; /* Section background */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
-}
-
-section:hover {
-    transform: scale(1.02); /* Slightly enlarge on hover */
-    box-shadow: 0 0 30px rgba(255, 111, 97, 0.5); /* Glowing shadow on hover */
-}
-
-/* Card Styles */
+/* Card Container */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
+/* Card Styles */
 .card {
-    background-color: #f9f9f9; /* Card background */
-    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners */
     padding: 20px;
-    flex: 1 1 calc(30% - 20px); /* Responsive card size */
-    box-shadow: 0 0 15px rgba(255, 111, 97, 0.2); /* Soft shadow */
-    transition: transform 0.3s, box-shadow 0.3s; 
+    width: calc(33.333% - 20px); /* Three cards per row */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
 }
 
 .card:hover {
     transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em; /* Larger heading */
+}
+
+.card p {
+    margin: 5px 0;
 }
 
 /* Button Styles */
-.tool-button, .favorite-button, .category-button, .insight-button, .submit-button {
-    background-color: #ff6f61; /* Button background color */
-    color: white; /* Button text color */
+.card button, .category button, .insight-button, .submit-button {
+    padding: 12px 20px; /* Increased padding */
+    background-color: #4CAF50;
+    color: white;
     border: none;
     border-radius: 5px;
-    padding: 12px 20px; /* Increased padding for a larger button */
     cursor: pointer;
-    font-size: 1.1em; /* Slightly larger font size */
-    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
-    margin-top: 10px; /* Space between buttons */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    font-size: 1em; /* Consistent button font size */
 }
 
-.tool-button:hover, .favorite-button:hover, .category-button:hover,
-.insight-button:hover, .submit-button:hover {
-    background-color: #e55a50; /* Darker shade on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+.card button:hover, .category button:hover, .insight-button:hover, .submit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
 }
 
-/* Favorites and Insights Styles */
-.favorites-container, .insights-container {
+/* Category List */
+.category-list {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.favorite-item, .insight {
-    background-color: #f9f9f9; /* Item background */
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    transition: transform 0.3s; /* Transition for hover effect */
+.category {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    flex: 1 1 calc(25% - 20px); /* Four categories per row */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
 }
 
-.favorite-item:hover, .insight:hover {
-    transform: translateY(-3px); /* Lift effect on hover */
+.category:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+}
+
+/* Favorites Container */
+.favorites-container {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Insight Form */
+#insight-form-container {
+    margin-top: 20px;
+}
+
+#insight-input {
+    width: 100%;
+    height: 120px; /* Increased height for better usability */
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+#insight-input:focus {
+    border-color: #4CAF50; /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Subtle glow effect */
+}
+
+/* Timeline Container */
+.timeline-container {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 20px;
 }
 
 /* Popup Styles */
 .popup {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.6); /* Dark background with opacity */
+    background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+    padding-top: 60px; /* Location of the box */
 }
 
 .popup-content {
-    background-color: #ffffff; /* Popup background color */
-    margin: auto; /* Center the popup */
+    background-color: #fefefe;
+    margin: 5% auto; /* Centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 600px; /* Set a max width for larger screens */
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Strong shadow for popup */
-    position: relative; /* Position relative for centering */
-    top: 50%; /* Move down 50% of the viewport height */
-    transform: translateY(-50%); /* Move up by half of its own height */
-    transition: transform 0.3s ease; /* Smooth transition for popup */
+    border-radius: 10px; /* Rounded corners */
 }
 
+/* Close Button */
 .close {
     color: #aaa;
     float: right;
@@ -187,76 +225,105 @@ section:hover {
 
 .close:hover,
 .close:focus {
-    color: #ff6f61; /* Change color on hover */
+    color: black;
     text-decoration: none;
     cursor: pointer;
 }
 
-/* Footer Styles */
-footer {
-    text-align: center;
-    margin-top: 20px;
+/* Insight Styles */
+.insight {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     padding: 10px;
-    background-color: #ffffff; /* White background for footer */
-    border-top: 2px solid #ff6f61; /* Top border */
-    border-radius: 10px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 5px 0;
 }
 
-footer p {
-    color: #555; /* Subtle text color */
-    margin: 0; /* Remove default margin */
+/* Additional Enhancements */
+.card-container, .category-list, .favorites-container, .timeline-container {
+    transition: all 0.3s ease; /* Smooth transitions for all containers */
 }
 
-/* Responsive Styles */
+/* Custom Scrollbar for Webkit Browsers */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4CAF50; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #45a049; /* Darker color on hover */
+}
+
+/* Focus Styles for Accessibility */
+:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5); /* Custom focus outline */
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center; /* Center text utility class */
+}
+
+.mb-20 {
+    margin-bottom: 20px; /* Margin bottom utility class */
+}
+
+.p-20 {
+    padding: 20px; /* Padding utility class */
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    .filters {
+        flex-direction: column; /* Stack filters vertically on smaller screens */
+    }
+
+    .filters select, .filters input {
+        width: 100%; /* Full width for inputs on smaller screens */
+        margin-bottom: 10px; /* Space between stacked elements */
+    }
+
+    nav ul li {
+        display: block; /* Stack navigation items vertically */
+        margin-bottom: 10px; /* Space between items */
+    }
+
     .card {
-        flex: 1 1 calc(45% - 20px); /* Adjust card size for smaller screens */
+        width: calc(50% - 20px); /* Two cards per row on medium screens */
     }
 
     .category {
-        flex: 1 1 calc(45% - 20px); /* Adjust category size for smaller screens */
+        flex: 1 1 calc(50% - 20px); /* Two categories per row on medium screens */
     }
 }
 
 @media (max-width: 480px) {
-    nav ul li {
-        display: block; /* Stack navigation items vertically */
-        margin: 10px 0; /* Add margin for spacing */
-    }
-
     .card {
-        flex: 1 1 100%; /* Full width cards on small screens */
+        width: 100%; /* Full width for cards on mobile */
     }
 
     .category {
-        flex: 1 1 100%; /* Full width categories on small screens */
+        flex: 1 1 100%; /* Full width for categories on mobile */
     }
 
-    input {
-        width: 100%; /* Full width input on small screens */
+    header h1 {
+        font-size: 2em; /* Adjust header size for mobile */
     }
-}
 
-/* Community Buttons Styles */
-.community-buttons {
-    margin-bottom: 20px;
-}
+    header p {
+        font-size: 1em; /* Adjust paragraph size for mobile */
+    }
 
-/* Submit Button Styles */
-.submit-button {
-    background-color: #4CAF50; /* Green background color */
-    color: white; /* Button text color */
-    border: none;
-    border-radius: 5px;
-    padding: 12px 20px; /* Increased padding for a larger button */
-    cursor: pointer;
-    font-size: 1.1em; /* Slightly larger font size */
-    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-}
+    .filters {
+        flex-direction: column; /* Stack filters vertically on mobile */
+    }
 
-.submit-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    .filters select, .filters input {
+        width: 100%; /* Full width for inputs on mobile */
+    }
 }
